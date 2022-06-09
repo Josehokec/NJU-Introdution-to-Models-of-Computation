@@ -1,0 +1,43 @@
+\problem{构造机器$\machine{copy_1}$使$\machine{copy_1}|0\underset{\uparrow}{1^x}0\cdots \twoheadrightarrow 01^x0\underset{\uparrow}{1^x}0\cdots$.}
+\begin{solution}
+
+{\color {red} {对第一版答案做出了修正.}} 第一版答案求解思路是每删除一个1,在其后面对应的位置加两次1,这样做确实能够实现拷贝功能,但是其最终的输出开头的0数量超过1个,与题意不符.
+
+求解思路：$0\underset{\uparrow}1^x0 \cdots \twoheadrightarrow 01\underset{\uparrow}0^{x-1}010 \cdots \twoheadrightarrow 0\underset{\uparrow}11^{x-1}011^{x-1}0\cdots$.注意考虑特殊情况，即当$x=0$时候，输出为$0\underset{\uparrow}101 \cdots$.
+
+表\ref{tab:sol5.2}定义了机器$\machine{copy_1}$:
+\begin{table}[!htbp]
+\centering
+\caption{机器$\machine{copy_1}$}
+\label{tab:sol5.2}
+\begin{tabularx}{\textwidth}{Y|Y|Y}
+\thickhline
+    &  0    &      1   \\
+\hline
+1   &  &   $1R2$   \\
+\hline
+2   & $0R5$ &   $0R3$   \\ %特殊情况考虑，即010...
+\hline
+3   & $0R4$ &   $0R3$   \\ %删完所有的1
+\hline
+4   & $1L7$ &   $1R5$   \\ %如果刚开始赋值则补1
+\hline
+5   & $1L6$ &   $1R5$   \\ %如果之前复制过则在后面补1
+\hline
+6   & $0L7$ &   $1L6$   \\ %回到复制1的前面
+\hline
+7   & $0L8$ &   $1R11$   \\ %需要判断是不是复制完了
+\hline
+8   & $0L8$ &   $1R9$   \\ %没有复制完
+\hline
+9   & $1R10$ &   $ $   \\ %开始恢复之前删的1
+\hline
+10   & $0R10$ &   $1R5$   \\ %删去的1恢复1个则需要在复制的区域加1
+\hline
+11   & $0R12$ &   $ $   \\ %复制完成的话则将指针回到标准输出位置
+\thickhline
+\end{tabularx}
+\end{table}
+
+输入$0\underset{\uparrow}1^x0 \cdots$，输出$0\underset{\uparrow}1^x0 1^x0\cdots$.
+\end{solution}

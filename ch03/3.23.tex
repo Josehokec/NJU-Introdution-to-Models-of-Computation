@@ -1,0 +1,56 @@
+\problem{设$f(n)$为习题1.16中定义的函数，试构造$F\in\Lambdaclosed$使 $F\churchnumber{n}=\churchnumber{f(n)}$对$n \in \mathbb{N}^{+}$成立.}
+
+\begin{proof}
+{\color {red} {对第一版答案做出了修正.}}
+习题1.16定义的函数$f(n)$为:
+$$\protect\begin{aligned}
+    f(0)&=0,\\
+    f(n)&=\protect\underbrace{n^{\cdot^{\cdot^{\cdot n}}}}_{n\textrm{个}n},
+\protect\end{aligned}$$
+
+令$w_n=\lambda x.\underbrace{x \cdots x}_{n\textrm{个}x}$,$n \in \mathbb{N}^{+}$,$x$为$v^{(0)}$.令$[x,y]=2^x \cdot 3^y$, $\Pi_2 [x,y] = y$.于是
+$$\sharp v^{(0)}=[0,0]=1$$
+
+则$\sharp x=[0,0]=1$.
+
+令$h(n)= \sharp w_n (n \ge 1)$,于是
+
+$$h(n)=\sharp w_n=[2,[\sharp x, \sharp \underbrace{x \cdots x}_{n\textrm{个}x}]]$$.
+
+补充定义$h(0)=0$.现证明$h(n) \in \PRF $.
+
+\[
+ \begin{array}{rcl}
+  h(n+1) & = & \sharp w_{n+1} \\
+  & = & [2,[\sharp x, \sharp \underbrace{x \cdots x}_{n+1\textrm{个}x}]] \\
+  & = & [2,[\sharp x, [1, [\sharp \underbrace{x \cdots x}_{n\textrm{个}x},  \sharp x]]]] \ \ \ (\textrm{according\ to\ definition\ 3.36(2)})
+ \end{array}
+\]
+
+注意到:$$\sharp \underbrace{x \cdots x}_{n\textrm{个}x}= \Pi _2 (\Pi _2 (h(n)))=\Pi _2^2 (h(n))$$
+
+根据$\sharp x=[0,0]=1$和$h(n+1)=[2,[\sharp x, [1, [\sharp \underbrace{x \cdots x}_{n\textrm{个}x},  \sharp x]]]]$,有：
+
+$$h(n+1)=[2,[1,[1,[\Pi _2^2(h(n)),1]]]]$$
+
+于是$h(n) \in \PRF $.
+
+由定理3.41(page 101),存在枚举子$E$,使得:
+$$E(H\churchnumber{n})=E\churchnumber{w_n}=w_n $$
+
+取$M \equiv \lambda z.(E(Hz))z $,于是：
+
+\[
+ \begin{array}{rcl}
+  M\churchnumber{n} & = & (E(H\churchnumber{n}))\churchnumber{n} \\
+  & = & w_n\churchnumber{n} \\
+  & = & \underbrace{\churchnumber{n} \cdots \churchnumber{n}}_{n\textrm{个}n}\\
+  & = & \churchnumber{\underbrace{n^{\cdot^{\cdot^{\cdot n}}}}_{n\textrm{个}n}} \ \ (n \ge 1)
+ \end{array}
+\]
+
+由于$n \in \mathbb{N}$,因此$M$此时不能完全$\lambda -\textrm{可定义}\  f(n)$,缺少$n=0$的情况.由引理3.33,令$D \equiv [U_3^3, U_1^2]$.
+
+取$L \equiv \lambda z.Dz\churchnumber{0}(Mz)$,此时$L \  \lambda-\textrm{可定义}\  f(n)$.
+
+\end{proof}

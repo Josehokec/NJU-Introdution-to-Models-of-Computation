@@ -1,0 +1,22 @@
+\problem{设机器$M_1$定义如表5.24.\\
+对于输入$\bar{x}$, 求输出.}
+\begin{table}[H]
+\centering
+\caption*{\textbf{表5.24}}
+\begin{tabularx}{\textwidth}{Y|Y|Y}
+\thickhline
+    &  0    &      1   \\
+\hline
+1   & $0L3$ &   $1R2$   \\
+\hline
+2   & $0L3$ &   $0R1$   \\
+\hline
+3   & $0L3$ &   $1L3$   \\
+\thickhline
+\end{tabularx}
+\end{table}
+
+\begin{solution}
+{\color {red} {对第一版答案做出了修正.}}
+$M_1$的操作为把第偶数次读到的1写成0,读到0后一直向左倒带到第一个位置的左端（越界）,从而无法读取从而停机. 因此当其输入为$\bar{x}$时, 输出为$\underset{\uparrow} \ \underbrace{0101\cdots01}_{\left\lfloor \frac{x}{2}\right\rfloor+1\text{个}01}0 \cdots$.
+\end{solution}

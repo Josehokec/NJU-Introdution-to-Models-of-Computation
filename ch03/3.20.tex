@@ -1,0 +1,10 @@
+\problem{构造$F\in\Lambdaclosed$使得对于任何$n\in\mathbb{N}$,
+$$F\churchnumber{n}\equivbeta\churchnumber{2^n}.$$}
+\begin{solution}
+
+{\color {red} {对第一版答案进行了补充说明.}}
+由引理3.33(page 97)得,存在$D\in\Lambdaclosed$,使得其能够完成if-else功能.
+
+注意到$\mathrm{Exp} \equiv \lambda xy.yx $能够实现一个指数函数功能，但是指数的取值为$\mathbb{N}^{*}$.这一题给定的指数范围是$\mathbb{N}$,于是使用$D$来实现if-else判断.构造结果如下:
+    $$F\equiv \lambda x.Dx\churchnumber{1}(\mathrm{Exp}\churchnumber{2}x).$$
+\end{solution}

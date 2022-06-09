@@ -1,0 +1,23 @@
+\problem{证明: 若在系统$\lambda\beta$中加入如下公理
+$$\textrm{(A)}\qquad\lambda xy.x=\lambda xy.y,$$
+则对任何的$M,N\in\Lambda$, $\lambda\beta+(A)\vdash M=N$.}
+
+\begin{proof}碰到这种题目，如果有两个以上的不同变元，使用标准组合子$I, K, K^*, S$来推导即可。
+
+证明方法一：对于所有的$M,N\in\Lambda$,
+$$ \lambda xy.x=\lambda xy.y $$
+$$ \Rightarrow (\lambda xy.x)MN=(\lambda xy.y)MN $$
+$$ \Rightarrow M=N $$
+
+证明方法二(推荐)：
+$$ \lambda xy.x=\lambda xy.y $$
+$$ \Rightarrow (\lambda xy.x)IM=(\lambda xy.y)IM $$
+$$ \Rightarrow I=M $$
+
+同理,可以推导出:\qquad \qquad \qquad \qquad \quad $ I=N $
+
+$$ \Rightarrow M=N $$
+
+故有$\lambda\beta+(A)\vdash M=N$.
+
+\end{proof}
