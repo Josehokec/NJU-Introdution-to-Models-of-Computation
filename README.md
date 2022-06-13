@@ -6,7 +6,7 @@
 
 **仅供参考。仅供参考。仅供参考。**
 
-## 如何修改习题答案？
+## 如何编辑习题答案并生成PDF文件
 
 1.下载本仓库文件（.zip压缩包）
 
@@ -14,7 +14,7 @@
 
 3.进入南大box的latex界面后，点击<kbd>创建新项目</kbd>，选择<kbd>上传项目</kbd>，将.zip压缩文件上传
 
-4.对其内容进行编辑
+4.对其内容进行编辑，保存，然后生成PDF文件
 
 ## 答案参考
 
@@ -29,3 +29,4 @@
 [![License: CC BY-NC-SA 4.0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 本文档采用[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)许可协议。
+
