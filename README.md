@@ -18,11 +18,11 @@
 
 ## 答案参考
 
-* Haitao Huang https://github.com/huanght1997/IntroComputationModel
-* 蒋炎岩老师 https://github.com/jiangyy/NJU-TOC-Solutions
-* 宋方敏老师（课堂讲解）
-* 张强 https://i-m.dev
-* 丁超 https://github.com/sleepycoke/NJU_Com_Models
+[1] Haitao Huang https://github.com/huanght1997/IntroComputationModel
+[2] 蒋炎岩老师 https://github.com/jiangyy/NJU-TOC-Solutions
+[3] 宋方敏老师（课堂讲解）
+[4] 张强 https://i-m.dev
+[5] 丁超 https://github.com/sleepycoke/NJU_Com_Models
 
 
 ## 许可协议
