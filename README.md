@@ -24,7 +24,9 @@ $ git config --global user.name
 
 $ git config --global user.email
 
-2.$ git clone code_repositories_link
+2.clone仓库
+
+$ git clone code_repositories_link
 
 例子：git clone https://github.com/huanght1997/IntroComputationModel.git
 
