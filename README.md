@@ -1,29 +1,36 @@
-# 《计算模型导引》题解
+# 《计算模型导引》教材习题解答
 
-配套宋方敏教授编著《计算模型导引》。
+配套教材为宋方敏教授编著《计算模型导引》。版本是从
 
-**仅供参考。仅供参考。仅供参考。**
+**仅供参考 & 仅供参考 & 仅供参考**
 
-## 编译前
+## 如何修改答案
 
-由于Linux下ctex默认不指定字体从而导致编译出错，不得已手动指定了一番字体，由于字体文件太大，就没传到本仓库上。
+不走提交分支的快速操作：
+1.下载本仓库code成zip文件
+2.登录南大的box.edu.edu.cn个人账号，找到左下角的latex打开
+3.然后将zip文件导入到overleaf，然后进行修改
 
-不想改任何文件的话，将Windows系统内的黑体，宋体，楷体字体复制到fonts文件夹内。
+## 如何请求提交分支到自己的github仓库或原作者仓库
 
-假设你的Windows安装在C盘，那么将C:\Windows\Fonts文件夹内的SimHei.ttf, SimKai.ttf, SimSun.ttc复制过来，并把SimSun.ttc重命名为SimSun.ttf。
-
-也可以使用自己的字体，修改solution.tex里面的`\setCJKMainFont`命令中对字体的配置即可。
-
-## 编译方式
-
-使用XeLatex编译solution.tex两次。
+先确保下载了git
+1.$ git clone code_repositories_link
+例子：git clone https://github.com/huanght1997/IntroComputationModel.git
+2.然后用latex相关工具打开并进行修改
+3.在当前文件目录下打开git终端，登录个人账号名称和邮箱
+$ git config --global user.name
+$ git config --global user.email
+4.然后使用相关git命令提交更改请求
+$ git add .
+$ git commit -m "your description"
+$ git push
 
 ## 答案参考
 
-* 宋方敏（课堂讲解）
-* 蒋炎岩 https://github.com/jiangyy/NJU-TOC-Solutions
-* 张强 https://i-m.dev
-* 丁超 https://github.com/sleepycoke/NJU_Com_Models
+[1] 黄海涛 https://github.com/huanght1997/IntroComputationModel
+[2] 蒋炎岩 https://github.com/jiangyy/NJU-TOC-Solutions
+[3] 张强 https://i-m.dev
+[4] 丁超 https://github.com/sleepycoke/NJU_Com_Models
 
 ## 许可协议
 [![License: CC BY-NC-SA 4.0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
