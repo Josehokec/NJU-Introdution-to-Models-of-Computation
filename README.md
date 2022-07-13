@@ -18,17 +18,17 @@
 
 先确保下载了git
 
-1.$ git clone code_repositories_link
-
-例子：git clone https://github.com/huanght1997/IntroComputationModel.git
-
-2.然后用latex相关工具打开并进行修改
-
-3.在当前文件目录下打开git终端，登录个人账号名称和邮箱
+1.在当前文件目录下打开git终端，登录个人账号名称和邮箱
 
 $ git config --global user.name
 
 $ git config --global user.email
+
+2.$ git clone code_repositories_link
+
+例子：git clone https://github.com/huanght1997/IntroComputationModel.git
+
+3.然后用latex相关工具打开并进行修改
 
 4.然后使用相关git命令提交更改请求
 
