@@ -1,10 +1,10 @@
 \problem{试找出$A\in\Lambdaclosed$使$A$ $\lambda$-定义函数$f(x,y)=x+y$.}
 \begin{solution}
-{\color {red} {对第一版答案做出了修正.}}
-只要知道$\lambda fx.f^n x = \lambda fx. \churchnumber{n}fx$就好做了.因为$\churchnumber{n} \equiv \lambda ab.a^nb$,于是$\lambda fx. \churchnumber{n}fx=\lambda fx. ((\lambda ab.a^nb)fx)=\lambda fx. f^nx$.
+{\color {red} {对第一版答案做出了修正.}}(遇到这种题目需要反推.只要知道$\lambda fx.f^n x \Leftarrow \lambda fx. \churchnumber{n}fx$就好做了)
 
-构造$A \churchnumber{n} \churchnumber{m} = \churchnumber{n+m} =\lambda fx. f^{n+m}x= \lambda fx. f^n (f^m x)$.
+因为$\churchnumber{n} \equiv \lambda ab.a^nb$,于是$\lambda fx. \churchnumber{n}fx=\lambda fx. ((\lambda ab.a^nb)fx)=\lambda fx. f^nx$.
 
+构造$A \churchnumber{n} \churchnumber{m} = \churchnumber{n+m} =\lambda fx. f^{n+m}x= \lambda fx. f^n (f^m x)$.于是有:
 \[
  \begin{array}{rcl}
   \lambda fx. f^n (f^m x) & = & \lambda fx. \churchnumber{n}f (\churchnumber{m} f x) \\

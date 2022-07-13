@@ -5,9 +5,7 @@ $$\protect\begin{aligned}
 \protect\end{aligned}$$
 且$G\in\Lambdaclosed$ $\lambda$-定义函数$g$. 试求$F\in\Lambdaclosed$使得$F$ $\lambda$-定义函数$f$.}
 
-\begin{proof}
-
-
+\begin{proof}令$D\equiv[U_3^3,U_1^2]$,于是将$f$用$if-else$语句表示有:
 \[
   \begin{array}{rcl}
   F\churchnumber{n} & = & D\churchnumber{n}\churchnumber{0} G(F(\mathrm{pred} \churchnumber{n})) \\
@@ -16,7 +14,8 @@ $$\protect\begin{aligned}
   \end{array}
 \]
 
+由一元不动点定理(page 93 定理3.22)可以求出$F$,用$\Theta$表示不动点组合子.
 
+于是$F\equiv \Theta \Big( \big(\lambda fx.\mathrm{D}x\churchnumber{0}G \big(f(\mathrm{pred}\ x) \big)\big) \Big)$ $\lambda$-定义函数$f$.
 
-由不动点定理可以求出$F$.于是$F\equiv \mathbf{Y} \bigg( \Big(\lambda fx.\mathrm{D}x\churchnumber{0}G \big(f(\mathrm{pred}\ x) \big)\Big) \bigg)$ $\lambda$-定义函数$f$.
 \end{proof}

@@ -1,0 +1,21 @@
+\problem{(附加证明题)证明:若在系统$\lambda \beta$中加入$$(A) \quad \lambda x.x =\lambda x.xx.$$ 做为额外公理,则对任何的$M,N \in \Lambda, \lambda \beta + (A) \vdash M=N$.}
+
+\begin{proof}
+
+目前只有一个变元,需要使用投影算子来证明.令$U_m^n= \lambda x_1 \cdots x_n.x_m(0 \le m \le n)$ ,则$U_m^n X_1 \cdots X_n = X_m$.
+
+
+$$ \lambda x.x =\lambda x.xx $$
+$$ \Rightarrow (\lambda x.x)U_1^2 =(\lambda x.xx)U_1^2 $$
+$$ \Rightarrow U_1^2 =U_1^2 U_1^2 $$
+$$ \Rightarrow U_1^2 \mathbf{I} =U_1^2 U_1^2 \mathbf{I}$$
+$$ \Rightarrow U_1^2 \mathbf{I} =U_1^2 $$
+$$ \Rightarrow U_1^2 \mathbf{I}N =U_1^2 N $$
+$$ \Rightarrow \mathbf{I} =U_1^2 N $$
+$$ \Rightarrow \mathbf{I}M =U_1^2 N M $$
+$$ \Rightarrow \mathbf{I}M =N $$
+$$ \Rightarrow M =N $$
+
+故$\lambda \beta + (A) \vdash M=N$.
+
+\end{proof}

@@ -1,6 +1,27 @@
-\problem{证明: 二元数论函数$x\dotdiv y\notin\BF$.}
-\begin{proof}
-假设$x\dotdiv y\in\BF$, 因为$\mathrm{pred}=\mathrm{Comp}_2^1[\dotdiv,P_1^1,S\circ Z]$, 所以$\mathrm{pred}\in\BF$. 所以, 要证明出题目的命题, 只要证明$\mathrm{pred}\notin\BF$即可.
+\problem{证明: 二元数论函数$x\dotdiv y \notin \BF$.}
+\begin{proof}{\color {red} {对第一版答案做出补充说明.}}
+
+\textbf{证法一}:通过引理来证明.引理:若$f:N^k \rightarrow N$,其中$k \in N^+, f \in \BF$,则$f(\Vec{x})$仅与$\Vec{x}$某一分量有关,与其他分量无关.
+
+证明:由于$f \in \BF$,故存在$f_0,f_1,\cdots,f_n$使得$f=f_n$.
+
+对$n$做归纳:
+
+1)当$n=0$时,$f_0 \in \IF$,
+
+情况1:若$f_0$为$Z$或$S$,结论成立;
+
+情况2:若$f_0$为$P$,则$P_i^n(\Vec{x})=x_i$,仅与$\Vec{x}$的$i$分量有关,结论成立;
+
+2)假设$0 \le i \le n$时,对$f_i$结论成立;
+
+3)当$i=n+1$时,$f_{n+1}(\Vec{x})= f_{i0}(f_{i1}(\Vec{x}),\cdots,f_{in}(\Vec{x}))$,由于$f_{i0}(\Vec{x})$仅与$\Vec{x}$某一分量有关,设为$t$,则,$f_{n+1}(\Vec{x})$仅与$\Vec{x}$第$t$分量有关.故引理成立.
+
+而对于$x \dotdiv y$来说,其与$x,y$都有关,因此$x\dotdiv y \notin \BF$.
+
+\hspace*{\fill}
+
+\textbf{证法二}:假设$x\dotdiv y\in\BF$, 因为$\mathrm{pred}=\mathrm{Comp}_2^1[\dotdiv,P_1^1,S\circ Z]$, 所以$\mathrm{pred}\in\BF$. 所以, 要证明出题目的命题, 只要证明$\mathrm{pred}\notin\BF$即可.
 
 显然$\mathrm{pred}\notin\IF$, 那么若$\mathrm{pred}\in\BF$, 则$\mathrm{pred}$拥有最短构造过程, 设其为$f_0,f_1,\cdots,f_n,$ $\mathrm{pred}$. 显然,$\mathrm{pred}$是通过$f_0,f_1,\cdots,f_n$中的某些函数通过复合运算得来.
 

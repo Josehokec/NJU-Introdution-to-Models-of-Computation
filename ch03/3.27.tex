@@ -1,0 +1,20 @@
+\problem{(附加证明题)证明:若在系统$\lambda \beta$中加入$$(A) \quad \mathbf{I}=\mathbf{S}.$$ 做为额外公理,则对任何的$M,N \in \Lambda, \lambda \beta + (A) \vdash M=N$.}
+
+\begin{proof}
+
+碰到这种题目,如果有两个以上的不同变元,使用标准组合子$\mathbf{I}, \mathbf{K}, \mathbf{K^*}, \mathbf{S}$(page 78)来推导即可.
+$$ \mathbf{I} = \mathbf{S} $$
+$$\Rightarrow \mathbf{IIIK}=\mathbf{SIIK} $$
+$$\Rightarrow \mathbf{K}=\mathbf{IK(IK)} $$
+$$\Rightarrow \mathbf{K}=\mathbf{KK} $$
+$$\Rightarrow \mathbf{KI}M=\mathbf{KKI}M $$
+$$\Rightarrow \mathbf{I}=\mathbf{K}M $$
+$$\Rightarrow \mathbf{II}=\mathbf{K}M\mathbf{I} $$
+$$\Rightarrow \mathbf{I}=M $$
+同理，可推到出$ \mathbf{I}=N $.于是$M=N $,因此$\lambda \beta + (A) \vdash M=N$.
+
+{\color {red} {注意:最好右乘$\Lambda$项,因为右乘不需要加括号,左乘需要加括号.举个左乘不加括号的错误例子: $\mathbf{I} = \mathbf{I} \Rightarrow \mathbf{I} = \mathbf{II}  \Rightarrow \mathbf{KI} = \mathbf{KII} \Rightarrow \mathbf{KI} = \mathbf{I} \Rightarrow \mathbf{K} \mathbf{I}M = \mathbf{I}M \Rightarrow \mathbf{I} = M $}}.
+
+{\color {red} {上述推理得$I=M$,岂不怪哉?问题在于$\mathbf{I} = \mathbf{I}\mathbf{I}  \nRightarrow \mathbf{K}\mathbf{I} = \mathbf{K}\mathbf{I}\mathbf{I}$,即左乘没有加括号.正确推到过程应该是:$\mathbf{I} = \mathbf{I}\mathbf{I}  \Rightarrow \mathbf{K}\mathbf{I} = \mathbf{K}(\mathbf{I}\mathbf{I})$ }}.
+
+\end{proof}

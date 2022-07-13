@@ -2,20 +2,20 @@
 $$\textrm{(A)}\qquad\lambda xy.x=\lambda xy.y,$$
 则对任何的$M,N\in\Lambda$, $\lambda\beta+(A)\vdash M=N$.}
 
-\begin{proof}碰到这种题目，如果有两个以上的不同变元，使用标准组合子$I, K, K^*, S$来推导即可。
+\begin{proof}{\color {red} {对第一版答案做出了补充.}}
+碰到这种题目,如果有两个以上的不同变元,使用标准组合子$\mathbf{I}, \mathbf{K}, \mathbf{K^*}, \mathbf{S}$(page 78)来推导即可.
 
 证明方法一：对于所有的$M,N\in\Lambda$,
 $$ \lambda xy.x=\lambda xy.y $$
 $$ \Rightarrow (\lambda xy.x)MN=(\lambda xy.y)MN $$
 $$ \Rightarrow M=N $$
 
-证明方法二(推荐)：
+\textbf{证明方法二}(推荐)：
 $$ \lambda xy.x=\lambda xy.y $$
-$$ \Rightarrow (\lambda xy.x)IM=(\lambda xy.y)IM $$
-$$ \Rightarrow I=M $$
+$$ \Rightarrow (\lambda xy.x)\mathbf{I}M=(\lambda xy.y)\mathbf{I}M $$
+$$ \Rightarrow \mathbf{I}=M $$
 
-同理,可以推导出:\qquad \qquad \qquad \qquad \quad $ I=N $
-
+同理,可以推导出:\qquad \qquad \qquad \qquad \quad $ \mathbf{I}=N $
 $$ \Rightarrow M=N $$
 
 故有$\lambda\beta+(A)\vdash M=N$.

@@ -1,8 +1,49 @@
 \problem{构造$H\in\Lambdaclosed$, 使得对于任意$n\in\mathbb{N}, x_1,\cdots, x_n\in\Lambda$, 有$$H\churchnumber{n}x_1\cdots x_n\equivbeta \lambda z.zx_1\cdots x_n.$$}
 \begin{proof}
+{\color {red} {对第一版答案做出了补充.}}
+    
+    证法一(严格证法):令$L_n\equiv[x_1,\cdots,x_n]\equiv\lambda z.z x_1\cdots x_n \ (n \in \mathbb{N})$.这里$x_i$为第$i$个变元,$z$为$v^{(0)}$,则$\sharp z = 1$.
+    
+    设$l(n)=\sharp L_n$,约定$l(0)=0$.下面证$l(n) \in \GRF$:
+    
+    令$h(n)=\sharp z x_1 \cdots x_n$,则$l(n)=[2,[\sharp z, \sharp z x_1 \cdots x_n]]=[2,[1,h(n)]]$.
+    $$h(1)=\sharp z x_1 = [1,[1,\sharp z_1]] = [1,[1,[0,1]]]$$
+    $$h(n+1)=\sharp z x_1 \cdots x_n x_{n+1}=[2,[h(n),\sharp x_{n+1}]]=[2,[h(n),[0,n+1]]]$$
+    
+    补充$h(0)=0$,故$h(n)\in \PRF$.
+    
+    于是$$l(n)=\protect\begin{cases}
+    0, & if\ n=0,\\
+    [2,[1,h(n)]], & otherwise.
+\protect\end{cases}$$
+
+    因此$l(n) \in \PRF$.
+    
+    令$M_n= \lambda x_1 \cdots x_n.[x_1, \cdots, x_n]$,$g(n)=\sharp M_n$,于是有:
+    $$g(n)=\sharp M_n=[2,[\sharp x_1,[2,\cdots[2,[x_n,l(n)]]\cdots]]]$$
+    
+    其中$\sharp x_i = [0,i]$.令$f(i,y)=[2,[[0,i],y]] \in \PRF$.则$$g(n)=f(1,f(2,\cdots,f(n-1,f(n,l(n)))\cdots))$$
+    
+    类比于习题1.17,可证$g(n)\in \PRF$.故存在$G \in \Lambdaclosed, G\ \lambda-$定义$g$.从而$G\churchnumber{n}=\churchnumber{M_n}$.
+    
+    由定理3.21(page 101),存在$E$,使得$E(G\churchnumber{n})=E(\churchnumber{M_n})=M_n$,令$H\equiv\lambda z.E(Gz)$,从而:
+    
+    $H\churchnumber{n}x_1\cdots x_n = \lambda z.E(Gz)x_1\cdots x_n=M_n x_1 \cdots x_n=[x_1, \cdots, x_n]=\lambda z.z x_1 \cdots x_n$.
+    
+    \hspace*{\fill}
+    
+    证法二(简单证法):
+    
     可知我们需要找到$H$使得$H\churchnumber{n}=\lambda x_1x_2\cdots x_nz. zx_1\cdots x_n$.
-    我们可以令$M_n=\lambda x_1x_2\cdots x_nz. zx_1\cdots x_n$, 那么其编码$g(n)=\sharp M_n=[2,[\sharp x_1, \sharp (\lambda x_2\cdots x_n.zx_1\cdots x_n)]]$, 而$\sharp (zx_1\cdots x_n)$是递归的, 因此$g$是递归的. 设$G\in\Lambdaclosed$ $\lambda$-定义了$g$, 从而$G\churchnumber{n}\equivbeta\churchnumber{M_n}$, 因此
+    
+    我们可以令$M_n=\lambda x_1x_2\cdots x_nz. zx_1\cdots x_n$, 那么其编码
+    $$g(n)=\sharp M_n=[2,[\sharp x_1, \sharp (\lambda x_2\cdots x_n.zx_1\cdots x_n)]]$$
+    
+    而$\sharp (zx_1\cdots x_n)$是递归的, 因此$g$是递归的. 设$G\in\Lambdaclosed$ $\lambda$-定义了$g$, 从而$G\churchnumber{n}\equivbeta\churchnumber{M_n}$, 因此
     $$E(G\churchnumber{n})\equivbeta E\churchnumber{M_n}\equivbeta M_n$$
     
     取$H\equiv \lambda x.E(Gx)$即可.
+    
+    
+    
 \end{proof}

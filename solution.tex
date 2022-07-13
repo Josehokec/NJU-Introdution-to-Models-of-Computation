@@ -11,7 +11,8 @@
 \usepackage{tabularx}
 \usepackage{float}
 \usepackage{longtable}
-\usepackage {color}
+\usepackage{color}
+\usepackage{bm}
 %\setlength{\parindent}{2em}
 \input{config.tex}
 \setCJKmainfont[Path=fonts/, BoldFont=simhei.ttf, ItalicFont=simkai.ttf]{simsun.ttf}
@@ -39,15 +40,26 @@
 \fancyfoot{}
 
 % Title
-\title{\bf 《计算模型导引》教材习题解答}
-\author{Haitao Huang, Shizhe Liu}
-\date{}
+
+\title{ 
+  \bf \huge 《计算模型导引》教材习题解答 
+  \rule{0.9 \textwidth}{1pt}
+  \bf \LARGE “Introduction to Models of Computation” Textbook Exercises' Solutions
+  \rule{0.9 \textwidth}{1pt}  
+}
+\author{By Haitao Huang}
+%\author{A Graduate Student, Department of Computer science and Technology, NJU}
+%\date{2022}
+\date{2022.6 Edition 1.1}
+
 \begin{document}
 
 \begin{titlepage}
+
 \maketitle
 \thispagestyle{empty}
 \end{titlepage}
+
 \begin{center}
 \bf\LARGE 第一版声明
 \end{center}
@@ -61,16 +73,16 @@
 同时殷切盼望各位大佬能对这份解答做出哪怕一点微小的贡献，包括但不限于：尚未解出题目的解答，不同于已有解答的另外的解题方法，对已有解答描述不够严谨甚至是错误的部分的补充、纠正或指出，对已有解答推理或描述不够清晰部分的补充或指出，公式中的错误，错别字等。任何的补充指正和提问，都感激不尽。
 
 \rightline{作者：Haitao Huang}    %右对齐
-\rightline{2020年于南京大学}
+\rightline{2019年于南京大学}
 
 
 \begin{center}
-\bf\LARGE 第一版补充说明
+\bf\LARGE 第1.1版声明
 \end{center}
 
-感谢Haitao Huang花费了巨大心血做出来教材习题解答第一版。第二版习题解答对第一版习题解答的第三章和五章解答做出了小的补充和修定。因此这个补充修订版的贡献量与第一版作者贡献量相比如同萤火虫与皓月的差距，因此在这向Haitao Huang大佬致敬！
+感谢Haitao Huang花费了巨大心血完成教材习题解答第一版(这里称为1.0版)。1.1版习题解答对1.0版的第一章、第三章和五章部分解答做出了小的补充和修定，同时加上了几道有意思的练习题。由于新版只在原来基础上进行了小幅度修改，故命名新版本为1.1版。本人深知对习题解答进行补充修订的贡献量与第一版作者贡献量相比如同萤火虫与皓月的差距，故不吹嘘本人功劳。在这向Haitao Huang大佬致敬！
 
-感谢宋方敏老师传授向无知的我传授计算模型知识！在没学这门课程之前，我不懂什么是“计算”，“计算的范围有多大”，也不敢说我是学过计算机的。尽管我这门课我只懂一些皮毛，很多知识我还没有完全明白、吃透，但是我仍然觉得这门课很有价值，有意义！希望南大以后能够一直将这门必修课开设下去，给学生们涨涨“内力”，让学生们体会到“计算”之美。
+感谢宋方敏老师传授向无知的我传授计算模型知识！在没学这门课程之前，我不懂什么是“计算”，“计算的范围有多大”，也不敢说我是学过计算机的。尽管我这门课我只懂一些皮毛，很多知识我还没有完全明白、吃透，但是我仍然觉得这门课很有价值，有意义！我发自内心的喜欢这门课。希望南大以后能够一直将这门必修课开设下去，给学生们涨涨“内力”，让学生们体会到“计算”之美。
 
 感谢Liangchuan Luo一直无私地为我解答相关问题，感谢Jingsong Dai和Feng Chen帮我核验个人的解答过程。
 
@@ -148,6 +160,9 @@
 \input{ch03/3.24.tex}
 \input{ch03/3.25.tex}
 \input{ch03/3.26.tex}
+\input{ch03/3.27.tex}
+\input{ch03/3.28.tex}
+
 \newpage
 \section{组合逻辑}
 \input{ch04/4.01.tex}

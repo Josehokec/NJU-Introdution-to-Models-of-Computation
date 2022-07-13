@@ -14,11 +14,8 @@ $$\sharp v^{(0)}=[0,0]=1$$
 则$\sharp x=[0,0]=1$.
 
 令$h(n)= \sharp w_n (n \ge 1)$,于是
-
-$$h(n)=\sharp w_n=[2,[\sharp x, \sharp \underbrace{x \cdots x}_{n\textrm{个}x}]]$$.
-
-补充定义$h(0)=0$.现证明$h(n) \in \PRF $.
-
+$$h(n)=\sharp w_n=[2,[\sharp x, \sharp \underbrace{x \cdots x}_{n\textrm{个}x}]]$$
+补充定义$h(0)=0$.现证明$h(n) \in \PRF $:
 \[
  \begin{array}{rcl}
   h(n+1) & = & \sharp w_{n+1} \\
@@ -26,7 +23,6 @@ $$h(n)=\sharp w_n=[2,[\sharp x, \sharp \underbrace{x \cdots x}_{n\textrm{个}x}]
   & = & [2,[\sharp x, [1, [\sharp \underbrace{x \cdots x}_{n\textrm{个}x},  \sharp x]]]] \ \ \ (\textrm{according\ to\ definition\ 3.36(2)})
  \end{array}
 \]
-
 注意到:$$\sharp \underbrace{x \cdots x}_{n\textrm{个}x}= \Pi _2 (\Pi _2 (h(n)))=\Pi _2^2 (h(n))$$
 
 根据$\sharp x=[0,0]=1$和$h(n+1)=[2,[\sharp x, [1, [\sharp \underbrace{x \cdots x}_{n\textrm{个}x},  \sharp x]]]]$,有：

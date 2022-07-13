@@ -1,5 +1,31 @@
 \problem{证明: 对于任何$M,N\in\Lambda$, 若$M\equivbeta N$, 则存在$T$使$M\manystepbeta T$且$N\manystepbeta T$. 这就是对于$\equivbeta$的CR性质.}
-\begin{proof}
+\begin{proof}{\color {red} {对第一版答案做出了补充说明.}}
+
+    \textbf{方法一}:由习题3.9知：$\exists P_0, \cdots , P_n$使$M \equiv P_0, N \equiv P_n$且$\forall i < n$有$P_i \rightarrow_{\beta} P_{i+1}$或$P_i \leftarrow_{\beta} P_{i+1}$.
+    
+    下面证明:
+    $$\exists T_i \  s.t. \  P_0 \twoheadrightarrow_{\beta} T_i \ and \  P_i \twoheadrightarrow_{\beta} T_i \quad(\star)$$
+    
+    对$i$做归纳证明.
+    
+    1) 当$i=0$时,取$T_0$为$M$即可,此时$(\star)$成立;
+    
+    2) 假设$i=k$时,$\exists T_k \  s.t. \  P_0 \twoheadrightarrow_{\beta} T_k \ and \  P_k \twoheadrightarrow_{\beta} T_k $;
+    
+    3) 当$i=k+1<n$时,有$P_0 \twoheadrightarrow_{\beta} T_k \ and \  P_k \twoheadrightarrow_{\beta} T_k$（归纳假设）,则
+    
+        情况1:$P_k \twoheadrightarrow_{\beta} P_{k+1}$,从而由CR性质,$\exists T_{k+1} \ s.t. \  T_k \twoheadrightarrow_{\beta} T_{k+1} \ and \ P_{k+1} \twoheadrightarrow_{\beta} T_{k+1}$,从而$(\star)$成立;
+    
+        情况2:$P_k \leftarrow_{\beta} P_{k+1}$,取$T_{k+1}$为$P_k$即可,此时$(\star)$也成立.
+    
+    于是归纳完成.
+    
+    因此有$\exists T_n \  s.t. \  P_0 \twoheadrightarrow_{\beta} T_n \ and \  P_n \twoheadrightarrow_{\beta} T_n $,取$T$为$T_n$即有$M\twoheadrightarrow_{\beta} T \ and \ N \twoheadrightarrow_{\beta} T$.
+    
+    %换行
+    \hspace*{\fill}
+    
+    \textbf{方法二}:
     $M\equivbeta N$蕴含
 	$$(M,N)\in\bigcup_{i\in\mathbb{N}}(\to_{\beta}\cup\leftarrow_{\beta})^k.$$
 	

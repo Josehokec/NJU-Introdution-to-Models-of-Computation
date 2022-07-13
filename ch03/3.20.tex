@@ -3,8 +3,23 @@ $$F\churchnumber{n}\equivbeta\churchnumber{2^n}.$$}
 \begin{solution}
 
 {\color {red} {对第一版答案进行了补充说明.}}
-由引理3.33(page 97)得,存在$D\in\Lambdaclosed$,使得其能够完成if-else功能.
+
+方法一:由引理3.33(page 97)得,存在$D\in\Lambdaclosed$,使得其能够完成if-else功能.
 
 注意到$\mathrm{Exp} \equiv \lambda xy.yx $能够实现一个指数函数功能，但是指数的取值为$\mathbb{N}^{*}$.这一题给定的指数范围是$\mathbb{N}$,于是使用$D$来实现if-else判断.构造结果如下:
     $$F\equiv \lambda x.Dx\churchnumber{1}(\mathrm{Exp}\churchnumber{2}x).$$
+    
+方法二:设$H$ $\lambda-$定义函数$h(x)=2x$.
+\[
+ \begin{array}{rcl}
+  \lambda fx. f^n (f^n x) & = & \lambda fx. \churchnumber{n}f (\churchnumber{n} f x) \\
+  & = & (\lambda vfx. vf (vf x))\churchnumber{m} .
+ \end{array}
+\]
+
+于是$H \equiv \lambda vfx.vf(vfx) \  \lambda-$定义函数$h(x)=2x$.注意到:
+$$\churchnumber{2^x} = \churchnumber{2 \cdot 2^{x-1}} = H\churchnumber{2^{x-1}}=H(H\churchnumber{2^{x-2}})=H^x\churchnumber{2^{0}}=H^x\churchnumber{1}=\churchnumber{x}F\churchnumber{1}=(\lambda x.xH\churchnumber{1})\churchnumber{x}$$
+
+令$F\equiv \lambda x.xH\churchnumber{1}$,则对于任何$n\in\mathbb{N},F\churchnumber{n}\equivbeta\churchnumber{2^n}.$
+
 \end{solution}

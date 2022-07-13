@@ -1,13 +1,20 @@
 \problem{证明: 对于固定的$k$, 一元数论函数$x+k\in\BF$.}
-\begin{proof}
-令$f_k(x)=x+k$.
-\begin{enumerate}
-\item 当$k=0$时, $f_0(x)=x=P_1^1(x)\in\IF$, 命题成立;
-\item 当$k=1$时, $f_1(x)=x+1=S(x)\in\IF$, 命题成立;
-\item 假设当$k=k_0(k_0\geqslant 1,k_0\in\mathbb{N})$时$f_{k_0}\in\BF$, 那么:
+\begin{proof}{\color {red} {对第一版答案做出补充说明.}}
 
-当$k=k_0+1$时,$f_{k_0+1}=x+k_0+1=S(x+k_0)=S\circ f_{k_0}(x)=\mathrm{Comp}^1_1[S,f_{k_0}]\in\BF$.
-\end{enumerate}
+\textbf{证法一}:因为$S(x)=x+1$(page 1 定义1.2),记$S^k \circ (x) = \underbrace{S\circ S \circ \cdots \circ S(x)}_{k\text{个}S}$,其中$\circ$是定义1.4的复合算子(page 4),规定$k=0$时,$S^k \circ (x)=x$.
+
+由定理1.2(page 6)知:$S^k \circ (x)=x+k \in \BF$.
+
+\hspace*{\fill}
+
+\textbf{证法二}:令$f_k(x)=x+k$.
+
+1) 当$k=0$时, $f_0(x)=x=P_1^1(x)\in\IF$, 命题成立;当$k=1$时, $f_1(x)=x+1=S(x)\in\IF$, 命题成立;
+
+2) 假设当$k=k_0(k_0\geqslant 1,k_0\in\mathbb{N})$时$f_{k_0}\in\BF$;
+
+3) 当$k=k_0+1$时,$f_{k_0+1}=x+k_0+1=S(x+k_0)=S\circ f_{k_0}(x)=\mathrm{Comp}^1_1[S,f_{k_0}]\in\BF$.
+
 
 由数学归纳法可知, 命题成立.
 \end{proof}
