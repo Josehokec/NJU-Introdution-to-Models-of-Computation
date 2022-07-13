@@ -1,6 +1,6 @@
 # 《计算模型导引》教材习题解答
 
-配套教材为宋方敏教授编著《计算模型导引》。版本是从
+配套教材为宋方敏教授编著《计算模型导引》。是习题解答的1.1版本，1.0版本请见[1]。
 
 **仅供参考 & 仅供参考 & 仅供参考**
 
@@ -28,8 +28,11 @@ $ git push
 ## 答案参考
 
 [1] 黄海涛 https://github.com/huanght1997/IntroComputationModel
+
 [2] 蒋炎岩 https://github.com/jiangyy/NJU-TOC-Solutions
+
 [3] 张强 https://i-m.dev
+
 [4] 丁超 https://github.com/sleepycoke/NJU_Com_Models
 
 ## 许可协议
