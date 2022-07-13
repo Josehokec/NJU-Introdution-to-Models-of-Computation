@@ -7,8 +7,11 @@
 ## 如何修改答案
 
 不走提交分支的快速操作：
+
 1.下载本仓库code成zip文件
+
 2.登录南大的box.edu.edu.cn个人账号，找到左下角的latex打开
+
 3.然后将zip文件导入到overleaf，然后进行修改
 
 ## 如何请求提交分支到自己的github仓库或原作者仓库
@@ -16,11 +19,15 @@
 先确保下载了git
 1.$ git clone code_repositories_link
 例子：git clone https://github.com/huanght1997/IntroComputationModel.git
+
 2.然后用latex相关工具打开并进行修改
+
 3.在当前文件目录下打开git终端，登录个人账号名称和邮箱
+
 $ git config --global user.name
 $ git config --global user.email
 4.然后使用相关git命令提交更改请求
+
 $ git add .
 $ git commit -m "your description"
 $ git push
